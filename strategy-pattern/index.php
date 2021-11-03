@@ -1,17 +1,14 @@
 <?php
-namespace Gorguner\DesignPatterns\StrategyPattern;
-
 
 spl_autoload_register(function($className) {
-    $file = 'classes/'. $className . '.php';
+    $file = './classes/'. str_replace('\\', '/', $className) . '.php';
     if (file_exists($file)) {
         include $file;
     }
 });
 
-$amount=50;
-
-(new PaymentStrategy($amount))->payAmount();
-
+$sc = new ShoppingCart();
+$sc->pay(new CreditCardPayment());
 echo "\n\n";
+$sc->pay(new PaypalPayment());
 

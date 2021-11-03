@@ -1,11 +1,22 @@
 # Design  Patterns
 
  1. Behavioural Patterns
-	 1. Strategy Pattern
+     1. Strategy Pattern
   https://www.javacodegeeks.com/2013/08/strategy-design-pattern-in-java-example-tutorial.html
-  
-  
-  
+  Can be used when you have multiple ways of doing a task and the client decides during runtime which one to use.
+ For instance in a ecommerce site if you have different kinds of payments Paypal, Credit Card etc then you can use this as follows:
+    first you need an interface:
+     interface PaymentStrategyInterface {
+        public function pay(int $amount);
+     }
+     Then you create the actual implementations depending on your strategy:
+     class CreditCardStrategy implements PaymentStrategyInterface {
+        public function pay(int $amount) {
+        echo "Paying with cc card number". $this->cardNumber. " amount: ". $amount;
+        }
+    
+
+
  2. Creational Patterns
 	 1. Factory Pattern:  Creating and delivering objects based on incoming parameters. 
 		- Simple Factory:

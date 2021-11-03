@@ -2,7 +2,7 @@
 namespace Gorguner\DesignPatterns\StrategyPattern;
 
 
-class PaymentStrategy{
+class PaymentStrategyTest{
 
     private $amount;
 
@@ -12,7 +12,7 @@ class PaymentStrategy{
 
     public function payAmount() {
         if ($this->amount > 500) {
-            $payment = new CCPayment();
+            $payment = new CCPaymentStrategy();
         } else {
             $payment = new PayPal();
         }
