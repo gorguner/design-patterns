@@ -19,13 +19,14 @@ test
 
 
  2. Creational Patterns
-	 1. Factory Pattern:  Creating and delivering objects based on incoming parameters. 
-		- Simple Factory:
-		- Static build method that returns a concrete class that is a subclass of a parent class based on parameters. 
-	2. Factory Method:
-		- Subclass creates the object but the factory class calls to common functions. 
-		- For instance you create a AbstractFactory and then sub classes that inherit from the abstract factory. 
-		- leave the object creation to the subclasses and  
+     1. Factory Pattern:  Creating and delivering objects based on incoming parameters. 
+        Factory Method Pattern enables you to use inheritance and polymorphism to encapsulate the creation of concrete products.
+           - Simple Factory:
+           - Static build method that returns a concrete class that is a subclass of a parent class based on parameters. 
+     3. Factory Method:
+         - Subclass creates the object but the factory class calls to common functions. 
+         - For instance you create a AbstractFactory and then sub classes that inherit from the abstract factory. 
+         - leave the object creation to the subclasses and  
 	- Car::build(carName)
 		- Sedan
 		- Hatchback 
